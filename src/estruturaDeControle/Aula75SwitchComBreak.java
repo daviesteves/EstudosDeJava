@@ -1,0 +1,48 @@
+package estruturaDeControle;
+
+import java.util.Scanner;
+
+
+public class Aula75SwitchComBreak {
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		String conceito = "";
+		System.out.print("digite a  nota: ");
+		int nota = entrada.nextInt();
+		
+		switch(nota) {
+		case 10 :case 9:
+			conceito = "A";
+			break;// com o Break se o caso for confirmado ele sai do switch
+		
+		case 8: case 7:
+			conceito = "B";
+			break;
+			
+		case 6: case 5:
+			conceito = "C";
+			break;
+			
+		case 4: case 3:
+			conceito = "D";
+			
+		case 2: 
+		case 1:
+		case 0:
+			conceito = "E";
+			break;
+			
+		default:
+			conceito = "Não informado";
+			
+			
+		}
+		
+		System.out.println("O Conceito é " + conceito);
+		entrada.close();
+		
+	}
+
+}
